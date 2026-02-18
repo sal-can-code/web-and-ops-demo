@@ -3,7 +3,7 @@
 Welcome to my professional showcase. This repository hosts a custom-built business hub designed to bridge the gap between **high-converting front-end design** and **automated back-end operations**.
 
 ## 🌐 Live Site
-[**Click here to view the live Portfolio & Interactive Demos**](https://yourusername.github.io/your-repo-name/)
+[**Click here to view the live Portfolio & Interactive Demos**](https://sal-can-code.github.io/web-and-ops-demo/)
 
 ---
 
