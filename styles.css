@@ -1,0 +1,251 @@
+/* =========================
+   COLOR SYSTEM & VARIABLES
+========================= */
+:root {
+  --primary-orange: #f97316;
+  --deep-orange: #ea580c;
+  --primary-blue: #0ea5e9;
+  --deep-blue: #0284c7;
+  --bg-white: #ffffff;
+  --bg-light-blue: #f0f9ff;
+  --bg-light-orange: #fff7ed;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --text-white: #ffffff;
+}
+
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg-white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+  background: var(--bg-white);
+  border-bottom: 4px solid var(--primary-orange);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--primary-orange);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: var(--primary-blue);
+}
+
+/* =========================
+   HERO SECTIONS
+========================= */
+.hero {
+  padding: 100px 10%;
+  background-color: var(--primary-orange);
+  color: var(--text-white);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.accent-text {
+  color: var(--primary-blue);
+}
+.underline-text {
+  text-decoration: underline;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--primary-blue);
+  color: var(--text-white);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+}
+
+.btn:hover {
+  background: var(--deep-blue);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.6);
+}
+
+.btn-orange {
+  background: var(--primary-orange);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+}
+.btn-orange:hover {
+  background: var(--deep-orange);
+}
+
+/* =========================
+   GRID & CARDS
+========================= */
+.container {
+  padding: 80px 10%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--bg-white);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: var(--primary-orange);
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  color: var(--primary-orange);
+  margin-bottom: 0.5rem;
+}
+.card h3.blue-title {
+  color: var(--primary-blue);
+}
+
+/* =========================
+   ABOUT PAGE SPECIFIC
+========================= */
+.about-hero {
+  min-height: 40vh;
+}
+
+.about-block {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  text-align: left;
+}
+.block-text {
+  flex: 1;
+}
+.block-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 30px;
+  border: 8px solid var(--bg-light-blue);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+}
+
+.blue-bg {
+  background-color: var(--bg-light-blue);
+}
+.orange-text {
+  color: var(--primary-orange);
+}
+
+/* =========================
+   CONTACT & FOOTER
+========================= */
+.contact {
+  padding: 80px 10%;
+  background: var(--bg-light-orange);
+}
+footer {
+  padding: 3rem;
+  background: var(--text-dark);
+  color: var(--text-white);
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .nav {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .nav a {
+    margin: 0 5px;
+  }
+  .about-block {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-img {
+    transform: rotate(0deg);
+    max-width: 250px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
